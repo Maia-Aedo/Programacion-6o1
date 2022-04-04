@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+}
+.a:hover {
+    color: grey;
+}
+nav {
+    background-color: #c7c7bb;
+}
+
