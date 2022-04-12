@@ -8,10 +8,10 @@ import { Routes } from '@angular/router';
 export const appRoutes: Routes = [
     {path: 'Inicio', component: InicioComponent},
     {path: '', component: InicioComponent},
-    {path: '**', component: InicioComponent},
     {path: 'equipo', component: EquipoComponent},
     {path: 'servicios', component: ServiciosComponent},
     {path: 'casos-exito', component: CasosExitoComponent},
     {path: 'contacto', component: ContactoComponent},
-];
+    {path: '**', component: InicioComponent}
 
+];
