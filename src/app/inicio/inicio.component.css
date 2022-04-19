@@ -1,48 +1,69 @@
 /* carousel (snippet) */
-.titulo {
-    margin-bottom: 10px;
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+
+.pag-title {
     font-family: fantasy;
-    font-size: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 27px;
 }
-.subtitulo1 {
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.subtitulo {
+.carousel-container{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
     margin-bottom: 30px;
-    padding: 2px;
-    font-family: initial;
-    text-decoration: solid;
 }
-.b-0 {
-    bottom: 0;
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
 }
-.bg-shadow {
-    background: rgba(76, 76, 76, 0);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
-    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+#carousel:hover{
+	animation-play-state: paused;
 }
-.top-indicator {
-    right: 0;
-    top: 1rem;
-    bottom: inherit;
-    left: inherit;
-    margin-right: 1rem;
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	top: 10px;
+	background: #edd6c9;
+	overflow: hidden;
+	border: solid 5px #b69d8f;
 }
-.overflow {
-    position: relative;
-    overflow: hidden;
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
 }
-.zoom img {
-    transition: all 0.2s linear;
+img:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
 }
-.zoom:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-a {
-    text-decoration: none;
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
 }
 /* jumbotron */
 .lead {
@@ -58,6 +79,7 @@ a {
 }
 .jumbotron-text {
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 .jumbotron-fluid {
     align-items: center;
@@ -73,13 +95,24 @@ body {
     background-color: #eee;
 }
 
+.socials-title {
+    margin-top: 50px;
+    font-family: fantasy;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box{
+    margin:15px;
+}
+
 a:hover,
 a:focus {
     text-decoration:none;
 }
 
 .fa {
-    color: #FFF;
+    color: #000;
 }
 
 .box-top {
